@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="400" viewBox="0 0 1260 400">
+  <defs>
+    <clipPath id="sides"><polygon points="166,812 360,436 554,812"/><polygon points="470,812 664,436 858,812"/></clipPath>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#22396a"/>
+      <stop offset="1" stop-color="#0a0f1e"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffcc33"/>
+      <stop offset="1" stop-color="#f0a500"/>
+    </linearGradient>
+  </defs><g transform="translate(24 24) scale(0.34375)"><rect width="1024" height="1024" rx="224" fill="url(#bg)"/><g transform="translate(71.68 92.32) scale(0.86)">
+  <g>
+    <path d="M226 665 A330 330 0 1 1 837 557" fill="none" stroke="url(#gold)" stroke-width="50" stroke-linecap="round"/>
+    <polygon points="886,562 792,544 826,628" fill="url(#gold)" stroke="url(#gold)" stroke-width="22" stroke-linejoin="round"/>
+    <polygon points="196,796 360,474 524,796" fill="#7fe0a8" stroke="#7fe0a8" stroke-width="28" stroke-linejoin="round"/>
+    <polygon points="500,796 664,474 828,796" fill="#c3a2ee" stroke="#c3a2ee" stroke-width="28" stroke-linejoin="round"/>
+    <polygon points="316,796 512,300 708,796" fill="none" stroke="#0a0f1e" stroke-width="64" stroke-linejoin="round" clip-path="url(#sides)"/>
+    <polygon points="316,796 512,300 708,796" fill="#ffffff" stroke="#ffffff" stroke-width="28" stroke-linejoin="round"/>
+  </g></g></g>
+  <text x="430" y="262" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="190" font-weight="800" letter-spacing="-4">
+    <tspan fill="#ffffff">Peak</tspan><tspan fill="url(#gold)">Spin</tspan>
+  </text>
+</svg>
