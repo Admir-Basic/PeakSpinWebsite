@@ -4,6 +4,7 @@ import type { CSSProperties } from 'react';
 import { MiniTable, type Variant } from '@/components/cards';
 import { FloatingDeco } from '@/components/deco';
 import { StoreButtons } from '@/components/store-buttons';
+import { CampaignSection } from '@/components/campaign-section';
 import { dict } from '@/lib/dict';
 import { games } from '@/lib/games';
 import { isLang } from '@/lib/site';
@@ -117,6 +118,8 @@ export default async function PeaksPage({ params }: PageProps<'/[lang]/peaks'>) 
           ))}
         </div>
       </section>
+
+      <CampaignSection game="peaks" lang={lang} accent="#7fe0a8" />
 
       <section className="mx-auto mt-16 max-w-5xl px-4 sm:px-6">
         <h2 className="reveal mb-5 text-2xl font-bold">{all.ways}</h2>

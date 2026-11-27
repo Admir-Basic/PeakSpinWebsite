@@ -4,6 +4,7 @@ import type { CSSProperties } from 'react';
 import { FloatingDeco } from '@/components/deco';
 import { DiceTable } from '@/components/dice';
 import { StoreButtons } from '@/components/store-buttons';
+import { CampaignSection } from '@/components/campaign-section';
 import { dict } from '@/lib/dict';
 import { games } from '@/lib/games';
 import { isLang } from '@/lib/site';
@@ -88,6 +89,8 @@ export default async function KockicePage({ params }: PageProps<'/[lang]/kockice
           </ul>
         </div>
       </section>
+
+      <CampaignSection game="kockice" lang={lang} accent="#f0a85a" />
 
       <section className="mx-auto mt-16 max-w-5xl px-4 sm:px-6">
         <h2 className="reveal mb-5 text-2xl font-bold">{all.ways}</h2>

@@ -4,6 +4,7 @@ import type { CSSProperties } from 'react';
 import { FloatingDeco } from '@/components/deco';
 import { MahjongTable, MahjongTile, TILE_GROUPS } from '@/components/mahjong';
 import { StoreButtons } from '@/components/store-buttons';
+import { CampaignSection } from '@/components/campaign-section';
 import { dict } from '@/lib/dict';
 import { games } from '@/lib/games';
 import { isLang } from '@/lib/site';
@@ -107,6 +108,8 @@ export default async function MahjongPage({ params }: PageProps<'/[lang]/mahjong
           </ul>
         </div>
       </section>
+
+      <CampaignSection game="mahjong" lang={lang} accent="#ff9a6c" />
 
       <section className="mx-auto mt-16 max-w-5xl px-4 sm:px-6">
         <h2 className="reveal mb-5 text-2xl font-bold">{all.ways}</h2>
