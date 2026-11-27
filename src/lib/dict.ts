@@ -35,6 +35,10 @@ export const dict = {
     spinTitle: 'Spin Yamb',
     spinText: 'Yamb na pet rolni. Zavrti, zadrži simbole koje želiš i upiši kombinaciju u pravu kolonu. Svaka runda ima cilj.',
     spinPoints: ['Tri vrtnje po rundi, zadržavanje rolni', 'Ciljevi rundi i bonusi', 'Utrke u sinhronizovanim rundama'],
+    mascotHello: 'Ej, ja sam Vrhko! Hajde da igramo.',
+    mascotTitle: 'Upoznaj Vrhka',
+    mascotText: 'Vrhko je najmanji vrh na planini i tvoj domaćin u aplikaciji. Dočeka te pri prvom pokretanju, daje savjete na početnom ekranu, slavi s tobom svaki novi nivo i završeno poglavlje, a u svakoj kampanji te upozna sa vodičem te igre.',
+    mascotPoses: ['Dočeka te', 'Daje savjete', 'Slavi s tobom'],
     features: 'Šta još dobijaš',
     featureList: [
       ['🧑‍🤝‍🧑', 'Igra sa društvom bez interneta', 'Napravi sobu na telefonu, ostali uđu preko Wi-Fi-ja, hotspota ili QR koda.'],
@@ -82,6 +86,10 @@ export const dict = {
     spinTitle: 'Spin Yamb',
     spinText: 'Yamb on five reels. Spin, hold the symbols you want and score the combination in the right column. Every round has a goal.',
     spinPoints: ['Three spins per round, hold reels', 'Round goals and bonuses', 'Races in synchronized rounds'],
+    mascotHello: 'Hey, I’m Peaky! Let’s play.',
+    mascotTitle: 'Meet Peaky',
+    mascotText: 'Peaky is the smallest peak on the mountain and your host in the app. He greets you on first launch, gives tips on the home screen, celebrates every new level and finished chapter with you, and introduces the guide of each game’s campaign.',
+    mascotPoses: ['Greets you', 'Gives tips', 'Celebrates with you'],
     features: 'What else you get',
     featureList: [
       ['🧑‍🤝‍🧑', 'Play with friends offline', 'Host a room on your phone; others join over Wi-Fi, hotspot or a QR code.'],

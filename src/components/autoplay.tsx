@@ -155,7 +155,7 @@ export function DiceFan() {
   const poses = DICE_PHASES[phase % DICE_PHASES.length]!;
   const faces = DICE_FACES[Math.floor(phase / DICE_PHASES.length) % DICE_FACES.length]!;
   return (
-    <div ref={root} className="fan-anim relative h-16 w-24" aria-hidden>
+    <div ref={root} className="fan-anim fan-dice relative h-16 w-24" aria-hidden>
       {faces.map((f, i) => (
         <div key={i} className="absolute top-2 left-1/2 -ml-[1.2rem]" style={poseStyle(poses[i]!, i)}>
           <Die value={f} size="2.4rem" held={!!poses[i]![5]} />

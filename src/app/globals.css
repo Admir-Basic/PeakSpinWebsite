@@ -17,6 +17,7 @@
 }
 
 html {
+  overflow-x: clip;
   background: var(--color-night);
   color: #fff;
   color-scheme: dark;
@@ -24,6 +25,8 @@ html {
 
 body {
   min-height: 100vh;
+  /* ukrasne karte (deco) i Vrhko smiju viriti preko ruba, ali bez horizontalnog skrola na telefonu */
+  overflow-x: clip;
   background:
     radial-gradient(1200px 600px at 50% -10%, #22396a99, transparent 70%),
     var(--color-night);
@@ -89,6 +92,50 @@ body {
 /* vodiči kampanja: oči trepnu svakih ~4 s */
 @keyframes guide-blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
 .guide-blink { animation: guide-blink 4s ease-in-out infinite; }
+/* Vrhko maše desnom ručicom */
+@keyframes vrhko-wave { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-24deg); } }
+.vrhko-wave { animation: vrhko-wave 0.9s ease-in-out infinite; }
+/* Vrhko na početnoj šeta odvojeno od znaka (14 s): stoji, ode lijevo skakućući, odmori, vrati se, skoči od radosti.
+   Šetnja (x) je na vanjskom elementu, skokovi i nagib na unutrašnjem, oba na istom ritmu. */
+@keyframes vrhko-stroll {
+  0%, 12% { transform: translateX(0); }
+  38%, 56% { transform: translateX(var(--walk, -150px)); }
+  82%, 100% { transform: translateX(0); }
+}
+@keyframes vrhko-hop {
+  0%, 12% { transform: translateY(0px) rotate(0deg) scaleY(1); }
+  16.3% { transform: translateY(-14px) rotate(-7deg) scaleY(1); }
+  20.6% { transform: translateY(0px) rotate(-4deg) scaleY(1); }
+  25% { transform: translateY(-14px) rotate(-7deg) scaleY(1); }
+  29.3% { transform: translateY(0px) rotate(-4deg) scaleY(1); }
+  33.6% { transform: translateY(-14px) rotate(-7deg) scaleY(1); }
+  38%, 44% { transform: translateY(0px) rotate(0deg) scaleY(1); }
+  47% { transform: translateY(0px) rotate(-12deg) scaleY(1); }
+  50% { transform: translateY(0px) rotate(12deg) scaleY(1); }
+  53%, 56% { transform: translateY(0px) rotate(0deg) scaleY(1); }
+  60.3% { transform: translateY(-14px) rotate(7deg) scaleY(1); }
+  64.6% { transform: translateY(0px) rotate(4deg) scaleY(1); }
+  69% { transform: translateY(-14px) rotate(7deg) scaleY(1); }
+  73.3% { transform: translateY(0px) rotate(4deg) scaleY(1); }
+  77.6% { transform: translateY(-14px) rotate(7deg) scaleY(1); }
+  82% { transform: translateY(0px) rotate(0deg) scaleY(1); }
+  87% { transform: translateY(4px) rotate(0deg) scaleY(0.88); }
+  91% { transform: translateY(-46px) rotate(-180deg) scaleY(1); }
+  95% { transform: translateY(0px) rotate(-360deg) scaleY(0.92); }
+  98%, 100% { transform: translateY(0px) rotate(-360deg) scaleY(1); }
+}
+/* znak na početnoj stoji mirno, dijelovi se miču zasebno (brand-mark.tsx): luk se svakih 9 s zavrti oko centra
+   znaka (512, 522.5 u viewBoxu), bočni vrhovi se naizmjenično dignu i spuste */
+@keyframes mark-spin { 0%, 70% { transform: rotate(0deg); } 86% { transform: rotate(372deg); } 92%, 100% { transform: rotate(360deg); } }
+@keyframes mark-rise { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-34px); } }
+.mark-spin { transform-box: view-box; transform-origin: 512px 522.5px; animation: mark-spin 9s cubic-bezier(0.5, 0, 0.3, 1) 1s infinite; }
+.mark-left { animation: mark-rise 4s ease-in-out infinite; }
+.mark-right { animation: mark-rise 4s ease-in-out -2s infinite; }
+@keyframes vrhko-say { 0%, 11% { opacity: 1; } 15%, 83% { opacity: 0; } 87%, 100% { opacity: 1; } }
+.vrhko-say { animation: vrhko-say 14s ease-in-out infinite; }
+.vrhko-stroll { animation: vrhko-stroll 14s ease-in-out infinite; }
+.vrhko-hop { transform-origin: 50% 60%; animation: vrhko-hop 14s linear infinite; }
+@media (max-width: 640px) { .vrhko-stroll { --walk: -110px; } }
 .shimmer {
   background: linear-gradient(100deg, #ffcc33 0%, #fff3c4 25%, #f0a500 50%, #fff3c4 75%, #ffcc33 100%);
   background-size: 200% auto;
@@ -144,6 +191,8 @@ body {
   transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease;
 }
 .group:hover .fan-anim > * { transform: translate(calc(var(--tx, 0) * 1.6), calc(var(--ty, 0) - 4px)) rotate(calc(var(--rot, 0) * 1.5)) scale(var(--s, 1)); }
+/* kocke se okreću oko svog centra (karte oko tačke ispod, pa bi kocka pri bacanju otišla dolje preko teksta) */
+.fan-dice > * { transform-origin: 50% 50%; }
 
 /* kontakt forma: odabrana tema, greška, poslana poruka */
 @keyframes chip-pop { 0% { transform: scale(1); } 40% { transform: scale(1.45) rotate(-12deg); } 100% { transform: scale(1); } }

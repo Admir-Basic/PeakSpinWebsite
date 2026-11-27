@@ -2,6 +2,8 @@ import Link from 'next/link';
 import type { CSSProperties } from 'react';
 import { FloatingDeco } from '@/components/deco';
 import { DiceFan, FreeCellFan, MahjongFan, PeaksFan, SpiderFan } from '@/components/autoplay';
+import { BrandMark } from '@/components/brand-mark';
+import { Mascot } from '@/components/mascot';
 import { Reels } from '@/components/reels';
 import { StatCard } from '@/components/stat-card';
 import { StoreButtons } from '@/components/store-buttons';
@@ -31,12 +33,24 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
             <p className="mt-4 max-w-xl text-lg text-white/75">{d.heroText}</p>
             <StoreButtons getOn={d.getOn} soon={d.soon} />
           </div>
-          <div className="flex justify-center">
-            <div className="float relative" style={{ '--t': '6s' } as CSSProperties}>
-              {/* zlatni sjaj koji se vrti iza logoa */}
-              <div className="halo absolute -inset-6 rounded-full bg-[conic-gradient(from_0deg,#ffcc3300,#ffcc3366,#7fe0a844,#c3a2ee55,#ffcc3300)] blur-2xl" aria-hidden />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="PeakSpin" width={300} height={300} className="relative w-56 rounded-[3rem] shadow-2xl shadow-black/60 sm:w-72" />
+          <div className="relative flex justify-center pb-24 sm:pb-28">
+            {/* znak bez kvadrata ikonice stoji mirno (dijelovi mu se miču sami), a zlatni sjaj se vrti iza njega */}
+            <div className="relative">
+              <div className="halo absolute inset-4 rounded-full bg-[conic-gradient(from_0deg,#ffcc3300,#ffcc3355,#7fe0a833,#c3a2ee44,#ffcc3300)] blur-2xl" aria-hidden />
+              <BrandMark className="relative w-56 drop-shadow-[0_18px_30px_#000a] sm:w-72" />
+            </div>
+            {/* Vrhko šeta ispred znaka (odvojeno od njega): ode lijevo, skakuće, vrati se, pa skoči od radosti */}
+            <div className="vrhko-stroll absolute right-2 bottom-0 sm:-right-4">
+              {/* oblačić ide sa Vrhkom (ne skakuće i ne vrti se sa njim), a dok šeta ispod znaka sakrije se */}
+              <div className="vrhko-say absolute -top-14 right-0 z-10">
+                <div className="pop-in relative w-max max-w-40 rounded-2xl bg-white px-3 py-2 text-sm font-bold text-[#1d2340] shadow-lg" style={{ animationDelay: '0.8s' }}>
+                  {d.mascotHello}
+                  <span className="absolute -bottom-1.5 left-1/2 size-3 -translate-x-1/2 rotate-45 bg-white" aria-hidden />
+                </div>
+              </div>
+              <div className="vrhko-hop">
+                <Mascot size={130} />
+              </div>
             </div>
           </div>
         </div>
@@ -164,6 +178,25 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
               <span className="mt-5 inline-flex items-center gap-1 font-bold text-spin transition group-hover:gap-2">{g.more} →</span>
             </article>
           </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto mt-14 max-w-5xl px-4 sm:px-6">
+        <div className="reveal grid items-center gap-6 rounded-3xl border border-gold/25 bg-gradient-to-br from-[#22396a] to-[#0f1830] p-6 md:grid-cols-[1fr_1.3fr]">
+          <div className="flex items-end justify-center gap-1">
+            {(['wave', 'talk', 'celebrate'] as const).map((p, i) => (
+              <figure key={p} className="flex flex-col items-center">
+                <Mascot pose={p} size={i === 1 ? 130 : 104} />
+                <figcaption className="text-xs font-semibold text-white/60">{d.mascotPoses[i]}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold">
+              {d.mascotTitle} <span aria-hidden>👋</span>
+            </h2>
+            <p className="mt-3 text-white/80">{d.mascotText}</p>
+          </div>
         </div>
       </section>
 
