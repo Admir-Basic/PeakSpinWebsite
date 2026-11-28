@@ -1,0 +1,3 @@
+# app-ads.txt za PeakSpin (AdMob, PLAN A9.3). Mora biti na korijenu domene koja je upisana u Play Console / App Store.
+# Prije objave: zamijeni pub-0000000000000000 pravim ID-jem izdavača iz AdMoba (Settings -> Account information) i ukloni # ispred reda.
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

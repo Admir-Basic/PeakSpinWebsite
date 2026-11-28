@@ -15,7 +15,7 @@ export const site = {
   /** država čije pravo važi */
   country: '[država]',
   /** datum zadnje izmjene uslova i privatnosti */
-  updated: '2026-11-25',
+  updated: '2026-11-28',
   /** linkovi na store kad aplikacija bude objavljena (null = "uskoro") */
   playStoreUrl: null as string | null,
   appStoreUrl: null as string | null,

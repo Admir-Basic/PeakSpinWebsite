@@ -36,6 +36,14 @@ function Bs() {
         korigovati ako su dobijeni greškom ili varanjem.
       </p>
 
+      <h2>Kupovine i reklame</h2>
+      <p>
+        U aplikaciji se mogu kupiti energija, pomoć, neograničena energija na određeno vrijeme i „Bez reklama“. To je digitalni sadržaj koji se isporučuje odmah;
+        plaćanje i povrat novca idu preko Google Play-a ili App Store-a, po njihovim pravilima. Ako je novac vraćen, uklanjamo ono što je kupovina dala. Coinsi se ne
+        prodaju. Kupljeno ne daje prednost u rangiranim mečevima ni turnirima. „Bez reklama“ ukida reklame između partija; reklame za nagradu ostaju dobrovoljne, uz
+        dnevni limit.
+      </p>
+
       <h2>Fer igra</h2>
       <ul>
         <li>Zabranjeno je varanje: izmijenjena aplikacija, botovi, automatizacija, iskorištavanje grešaka, dogovaranje rezultata i više naloga radi prednosti.</li>
@@ -91,6 +99,13 @@ function En() {
       <p>
         Coins, XP and in-game rewards have no monetary value. They cannot be exchanged for money, goods or services, transferred to another player or cashed out. We
         may correct them if they were obtained by mistake or by cheating.
+      </p>
+
+      <h2>Purchases and ads</h2>
+      <p>
+        You can buy energy, hints, unlimited energy for a limited time and “No ads” in the app. This is digital content delivered immediately; payment and refunds go
+        through Google Play or the App Store, under their rules. If a purchase is refunded, we remove what it gave. Coins are not sold. Purchases give no advantage in
+        ranked matches or tournaments. “No ads” removes ads between games; reward ads stay optional, with a daily limit.
       </p>
 
       <h2>Fair play</h2>

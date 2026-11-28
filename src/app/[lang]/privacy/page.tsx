@@ -40,6 +40,15 @@ function Bs() {
         <li>
           <b>Tehnički podaci.</b> Vrijeme zadnje aktivnosti, sesije za prijavu (token za obnovu čuvamo samo kao kriptografski otisak) i IP adresa u logovima servera.
         </li>
+        <li>
+          <b>Kupovine.</b> Kad kupiš nešto u aplikaciji (energija, pomoć, Bez reklama), plaćanje obavlja Google Play ili App Store. Mi dobijemo samo identifikator
+          kupovine, proizvod i vrijeme (preko usluge RevenueCat), nikad podatke o kartici.
+        </li>
+        <li>
+          <b>Reklame.</b> Aplikacija prikazuje reklame preko Google AdMoba: reklame za nagradu samo kad ih sam pokreneš i reklamu između partija (najviše svaka treća
+          partija, nikad u rangiranim mečevima ni turnirima). Google za prikaz i mjerenje reklama koristi identifikator za oglašavanje, podatke o uređaju i IP adresu,
+          po svojim pravilima. Mi od toga dobijemo samo potvrdu da je reklama za nagradu odgledana.
+        </li>
       </ul>
       <p>
         <b>Na telefonu</b> ostaju podešavanja, keš pravila i nivoa, napredak kampanje i token za prijavu (u sigurnom spremištu sistema: Keychain / Keystore).
@@ -51,7 +60,7 @@ function Bs() {
 
       <h2>Šta ne radimo</h2>
       <ul>
-        <li>Nema reklama, reklamnih SDK-ova ni praćenja između aplikacija.</li>
+        <li>Ne dajemo oglašivačima tvoj email, nadimak ni rezultate. Personalizovane reklame su samo uz tvoju saglasnost (u EU), a izbor možeš promijeniti u aplikaciji: Nalog → Postavke privatnosti reklama.</li>
         <li>Ne prodajemo podatke i ne dijelimo ih radi marketinga.</li>
         <li>Ne prikupljamo lokaciju, kontakte, fotografije ni mikrofon.</li>
       </ul>
@@ -68,6 +77,10 @@ function Bs() {
       <p>
         Podaci su na našem serveru kod pružaoca hostinga [naziv hostinga, država]. Email za kod za prijavu šalje [pružalac email usluge]. Oni podatke obrađuju samo po
         našem nalogu.
+      </p>
+      <p>
+        Reklame prikazuje Google (AdMob), kupovine obrađuju Google Play i Apple App Store, a potvrde kupovina nam prosljeđuje RevenueCat. Za podatke koje oni prikupe
+        važe i njihove politike privatnosti.
       </p>
 
       <h2>Koliko dugo čuvamo</h2>
@@ -86,7 +99,7 @@ function Bs() {
       <h2>Tvoja prava</h2>
       <p>
         Imaš pravo na pristup, ispravku i brisanje podataka, ograničenje obrade, prigovor i prenosivost podataka, kao i pravo na žalbu nadležnom tijelu za zaštitu
-        podataka. Zahtjev pošalji na <Mail />.
+        podataka. Zahtjev pošalji na <Mail />. Saglasnost za personalizovane reklame možeš povući u aplikaciji (Nalog → Postavke privatnosti reklama).
       </p>
 
       <h2>Djeca</h2>
@@ -125,6 +138,15 @@ function En() {
         <li>
           <b>Technical data.</b> Last activity time, sign-in sessions (we only store a cryptographic hash of the refresh token) and the IP address in server logs.
         </li>
+        <li>
+          <b>Purchases.</b> When you buy something in the app (energy, hints, No ads), Google Play or the App Store handles the payment. We only receive the purchase
+          identifier, product and time (through RevenueCat), never card details.
+        </li>
+        <li>
+          <b>Ads.</b> The app shows ads through Google AdMob: reward ads only when you start them, and an ad between games (at most every third game, never in ranked
+          matches or tournaments). Google uses the advertising ID, device data and IP address to show and measure ads, under its own policies. We only receive a
+          confirmation that a reward ad was watched.
+        </li>
       </ul>
       <p>
         <b>On your phone</b> we keep settings, a cache of rules and levels, campaign progress and the sign-in token (in the system secure storage: Keychain / Keystore).
@@ -136,7 +158,7 @@ function En() {
 
       <h2>What we do not do</h2>
       <ul>
-        <li>No ads, no ad SDKs and no cross-app tracking.</li>
+        <li>We do not give advertisers your email, nickname or scores. Personalized ads are shown only with your consent (in the EU), and you can change your choice in the app: Account → Ad privacy settings.</li>
         <li>We do not sell data or share it for marketing.</li>
         <li>We do not collect location, contacts, photos or microphone data.</li>
       </ul>
@@ -153,6 +175,10 @@ function En() {
       <p>
         Data is stored on our server at the hosting provider [hosting name, country]. Sign-in code emails are sent by [email provider]. They process data only on our
         instructions.
+      </p>
+      <p>
+        Ads are served by Google (AdMob), purchases are processed by Google Play and the Apple App Store, and purchase confirmations reach us through RevenueCat. Their
+        privacy policies also apply to the data they collect.
       </p>
 
       <h2>How long we keep data</h2>
@@ -171,7 +197,7 @@ function En() {
       <h2>Your rights</h2>
       <p>
         You have the right to access, correct and delete your data, to restrict processing, to object and to data portability, and to lodge a complaint with your data
-        protection authority. Send requests to <Mail />.
+        protection authority. Send requests to <Mail />. You can withdraw consent for personalized ads in the app (Account → Ad privacy settings).
       </p>
 
       <h2>Children</h2>
